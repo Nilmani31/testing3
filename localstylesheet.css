@@ -1,0 +1,29 @@
+p{
+    color: red;
+    font-weight: bold;
+}
+body{
+    counter-reset: main-topic;
+    background-image: url("computer-technology-background-laptop-login-screen-with-data-and-software-download-status-elements-that-shows-work-isometric-image-blue-background-illustra.jpg");
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main-topic{
+    counter-reset: sub-topic;
+}
+.center{
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    text-decoration: underline;
+}
+.main-topic::before {
+    counter-increment: main-topic;
+    content: counter(main-topic) ". ";
+}
+.sub-topic::before {
+    counter-increment: sub-topic;
+    content: counter(main-topic) ". " counter(sub-topic) " ";
+    font-style: italic;
+}
